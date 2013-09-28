@@ -1,0 +1,21 @@
+<%= form_for(@duda) do |f| %>
+  <% if @duda.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@duda.errors.count, "error") %> prohibited this duda from being saved:</h2>
+
+      <ul>
+      <% @duda.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ngaa %><br>
+    <%= f.text_area :ngaa %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

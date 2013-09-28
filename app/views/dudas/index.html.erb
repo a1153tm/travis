@@ -1,0 +1,27 @@
+<h1>Listing dudas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ngaa</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dudas.each do |duda| %>
+      <tr>
+        <td><%= duda.ngaa %></td>
+        <td><%= link_to 'Show', duda %></td>
+        <td><%= link_to 'Edit', edit_duda_path(duda) %></td>
+        <td><%= link_to 'Destroy', duda, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Duda', new_duda_path %>
