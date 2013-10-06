@@ -19,8 +19,8 @@ development:
   encoding: unicode
   database: travis_development
   pool: 5
-  username: travis
-  password:
+  username: travis_test
+  password: travis_test
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -48,13 +48,13 @@ test:
   encoding: unicode
   database: travis_test
   pool: 5
-  username: travis
-  password: travis
+  username: travis_test
+  password: travis_test
 
 production:
   adapter: postgresql
   encoding: unicode
   database: travis_production
   pool: 5
-  username: travis
-  password:
+  username: travis_test
+  password: travis_test
