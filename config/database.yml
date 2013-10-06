@@ -49,7 +49,7 @@ test:
   database: travis_test
   pool: 5
   username: travis
-  password:
+  password: travis
 
 production:
   adapter: postgresql
