@@ -2,5 +2,8 @@ language: ruby
 rvm:
   - "2.0.0"
 before_script:
+  - psql -c "drop role travis_test"
   - psql -c "create role travis_test with password 'travis_test' login createdb;" -U postgres
-script: "bundle exec rake db:drop db:create db:migrate test"
+script:
+  - "bundle exec rake db:drop db:create db:migrate"
+  - "bundle exec rake"
